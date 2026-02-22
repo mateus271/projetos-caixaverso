@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as *;
+
+* {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family-main;
+    color: $cor-texto-primaria;
+    background: $cor-fundo-primaria;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}

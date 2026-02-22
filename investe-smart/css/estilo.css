@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  background: #1D2939;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.botao {
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  font-size: 20px;
+  background: #4621CC;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.produtos__titulo {
+  font-size: 20px;
+  font-weight: bold;
+}
+.produtos_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.produtos__item {
+  background-color: #101828;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.produtos__item .produto-imagem {
+  border-radius: 4px;
+  height: 220px;
+}
+.produtos__item .produto_titulo {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+.produtos__item .produto_descricao {
+  font-size: 15px;
+  text-align: justify;
+}
+.produtos__item .produto_observacao {
+  font-size: 13px;
+  font-style: italic;
+}
+.produtos__item:hover {
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.18);
+  transform: translateY(-8px) scale(1.03);
+  z-index: 2;
+  position: relative;
+}
+
+.card-topo__titulo {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.card-investimento__valor {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.menu-lateral {
+  width: 18%;
+  display: flex;
+  flex-direction: column;
+  background-color: #101828;
+  height: calc(100% - 30px);
+  padding: 15px;
+}
+.menu-lateral__logo {
+  color: #FFFFFF;
+  background-color: #4621CC;
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.menu-lateral__logo__img {
+  width: 30px;
+}
+.menu-lateral__lista {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+.menu-lateral__lista__item {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.menu-lateral__lista__item:hover {
+  background-color: lightgrey;
+}
+.menu-lateral__lista .selecionado {
+  background-color: #613DE4;
+  cursor: auto;
+}
+
+.home {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.home .conteiner-conteudo {
+  display: flex;
+}
+
+.conteiner-conteudo {
+  width: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/*# sourceMappingURL=estilo.css.map */

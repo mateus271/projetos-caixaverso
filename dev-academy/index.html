@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/estilo.css">
+    <title>Dev Academy</title>
+</head>
+<body>
+    <header class="header">
+        <p class="header__logo">DevAcademy</p>
+
+        <img id="botao-header" class="header__botao" src="./src/assets/icone-menu.svg" alt="Ícone menu mobile">
+
+        <nav class="nav-links" aria-label="Principais áreas do portal">
+            <ul class="nav-links__list">
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Mentoria</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-home">
+        <div class="input-busca-conteiner">
+            <input id="input-busca" type="text" placeholder="Buscar tecnologia (ex: TypeScript)...">
+        </div>
+
+        <section class="cursos-container" id="grid-cursos">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <h1 class="logo">
+                <span class="logo__destaque">Dev</span>Academy
+            </h1>
+            <p class="texto">Acelerando carreiras tech com foco no que o mercado realmente pede.</p>
+        </div>
+
+        <nav class="nav-links" id="footerLinks" aria-label="Principais áreas do portal">
+            <h1 class="nav-links__titulo">Explorar</h1>
+            <ul>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Mentoria</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Entrar</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer__newsletter">
+            <h1>Newsletter</h1>
+
+            <div class="input-conteiner">
+                <input id="input-newsletter" type="email" placeholder="E-mail">
+                <button id="botao-newsletter">Ok</button>
+            </div>
+        </div>
+    </footer>
+
+    <div class="menu-mobile" id="menuMobile" aria-label="Menu de navegação para dispositivos móveis" aria-expanded="false">
+        <div id="lateralMenu"></div>
+
+        <div class="conteiner-itens-menu">
+            <img src="./src/assets/icone-fechar.svg" alt="Ícone de X, para fechar o menu">
+            <nav class="nav-links" aria-label="Principais áreas do portal">
+                <ul class="nav-links__list">
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Mentoria</a></li>
+                    <li><a href="#">Comunidade</a></li>
+                    <li><a href="#">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>

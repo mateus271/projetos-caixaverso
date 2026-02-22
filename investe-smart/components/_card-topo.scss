@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as *;
+
+.card-topo {
+    &__titulo {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+.card-investimento {
+
+    &__titulo {
+    
+    }
+    
+    &__valor {
+        font-size: 30px;
+        font-weight: bold;
+    }
+}

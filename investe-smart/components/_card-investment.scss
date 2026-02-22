@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__titulo {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    &_container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    &__item {
+        background-color: $cor-fundo-escura;
+        padding: 10px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .produto-imagem {
+            border-radius: 4px;
+            height: 220px;
+        }
+
+        .produto_titulo {
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .produto_descricao {
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .produto_observacao {
+            font-size: 13px;
+            font-style: italic;
+        }
+    }
+
+    &__item:hover {
+        box-shadow: 0 8px 24px rgba(30, 41, 59, 0.18);
+        transform: translateY(-8px) scale(1.03);
+        z-index: 2;
+        position: relative;
+    }
+}

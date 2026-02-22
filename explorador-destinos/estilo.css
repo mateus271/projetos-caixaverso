@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+.localizacao {
+    span {
+        margin-left: 10px;
+    }
+}
+
+.destinos-e-favoritos-container {
+    display: flex;
+    justify-content: space-around;
+
+    section {
+        width: 40%;
+
+        .destinos-container,
+        .favoritos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            
+            .destino {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+        
+                p {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+}
+

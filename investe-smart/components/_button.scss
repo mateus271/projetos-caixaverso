@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+
+.botao {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    background: $cor-primaria;
+    color: $cor-texto-primaria;
+    cursor: pointer;
+}

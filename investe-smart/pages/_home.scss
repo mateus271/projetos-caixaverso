@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+.home {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    .conteiner-conteudo {
+        display: flex;
+    }
+}
+
+.conteiner-conteudo {
+    width: calc(100% - 40px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

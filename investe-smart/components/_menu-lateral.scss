@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as *;
+
+.menu-lateral {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    background-color: $cor-fundo-escura;
+    height: calc(100% - 30px);
+    padding: 15px;
+
+    &__logo {
+        color: $cor-texto-primaria;
+        background-color: $cor-primaria;
+        font-size: 30px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+
+        &__img {
+            width: 30px;
+        }
+    }
+
+    &__lista {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+
+        &__item {
+            display: flex;
+            gap: 10px;
+            font-size: 20px;
+            padding: 10px;
+            width: calc(100% - 20px);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        &__item:hover {
+            background-color: lightgrey;
+        }
+
+        .selecionado {
+            background-color: $cor-primaria-light;
+            cursor: auto;
+        }   
+    }
+}

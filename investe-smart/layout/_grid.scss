@@ -1,0 +1,5 @@
+.row {
+    display: flex;
+    flex-wrap:wrap;//permite que os cards se quebrem em linha no mobile
+    gap:20px;
+}
