@@ -1,0 +1,54 @@
+<main>
+  <div class="topo-pagina">
+    <h1>Imersão Help Desk</h1>
+    <h2>Central de ajuda</h2>
+    <p>Cadastre um novo ticket usando esse formulário</p>
+  </div>
+
+  <form action="" class="formulario-demanda">
+    <label for="nome-usuario">Nome do cliente:</label>
+    <input type="text" id="nome-usuario" name="nome-usuario" placeholder="Fulano de Tal" [(ngModel)]="nomeUsuario">
+
+    <label for="problema">Problema/Dúvida:</label>
+    <textarea id="problema" name="problema" placeholder="Detalhe o problema do cliente" [(ngModel)]="problema"></textarea>
+
+    @if (editandoDemanda()) {
+      <button (click)="alterarDemanda(demandaEditadaId())">Salvar alterações</button>
+      <button (click)="cancelarEdicao()">Cancelar</button>
+    } @else {
+      <button (click)="adicionarDemanda()">Cadastrar solicitação</button>
+    }
+  </form>
+
+  <section class="lista-tickets">
+    <h2>Lista de tickets abertos</h2>
+
+    @if (tickets.length <= 0) {
+      <div>
+        <p>Não existem tickets pendentes</p>
+      </div>
+    } @else {
+      <div class="tickets-conteiner">
+      @for (ticket of tickets; track $index) {
+          <div class="ticket-card">
+            <p>
+              <strong>Demanda aberta por:</strong> 
+              {{ ticket.nomeUsuario }}
+            </p>
+            
+            <p>
+              <strong>Qual é o problema?</strong>
+              {{ ticket.problema }}
+            </p>
+            
+            <div class="botoes">
+              <button class="botao-editar" (click)="editarDemanda(ticket.id)">Editar</button>
+              <button class="botao-resolver" (click)="resolverDemanda(ticket.id)">Resolver</button>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </section>
+
+</main>

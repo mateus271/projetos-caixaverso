@@ -1,0 +1,27 @@
+:root {
+    --background-header: #4B19E6;
+    --background-pagina: #F0F2F5;
+    
+    --branco: #FFFFFF;
+
+    --texto-secundario: #D4C8F9;
+    --texto-cinza: #889797;
+    --texto-padrao: #333333;
+
+    --verde: #27AE60;
+    --vermelho: #E74C3C;
+}
+
+html, body { 
+    height: 100%;
+    color: var(--texto-padrao); 
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}

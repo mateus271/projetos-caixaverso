@@ -1,0 +1,109 @@
+main {
+    display: flex;
+    flex-direction: column;
+    
+    .topo-pagina {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 70px;
+        padding-bottom: 20px;
+        background: #314DE5;
+        color: white;
+        height: 230px;
+    }
+    
+    .formulario-demanda {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        border-radius: 6px;
+        padding: 20px;
+        width: 50%;
+        margin-top: -7%;
+        background: white;
+        align-self: center;
+        gap: 20px;
+
+        label {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        textarea {
+            font-family: inherit;
+            resize: none;
+            height: 180px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            background: #314DE5;
+            color: white;
+            margin-top: 15px;
+        }
+    }
+
+    .lista-tickets {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-top: 11px solid #314DE5;
+        border-radius: 4px;
+        width: 80%;
+        align-self: center;
+        margin-top: 20px;
+        padding-top: 30px;
+        padding-bottom: 60px;
+
+        .tickets-conteiner {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+
+            .ticket-card {
+                background-color: #E56018;
+                color: black;
+                border-radius: 4px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: space-around;
+
+                p {
+                    font-size: 20px;
+                }
+
+                .botoes {
+                    display: flex;
+                    justify-content: space-between;
+
+                    button {
+                        border: none;
+                        border-radius: 4px;
+                        padding: 10px 15px;
+                        font-size: 18px;
+                    }
+
+                    .botao-editar {
+                        background-color: #E5D817;
+                    }
+                    
+                    .botao-resolver {
+                        background-color: #17E525;
+                    }
+                }
+            }
+
+        }
+    }
+}

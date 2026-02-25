@@ -1,0 +1,41 @@
+.card-transacao {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    padding: 20px;
+    background-color: var(--branco);
+    align-items: center;
+
+    .detalhes-transacao {
+        display: flex;
+        flex-direction: column;
+
+        .data-transacao {
+            text-transform: uppercase;
+        }
+
+        .descricao-transacao {
+            font-weight: bold;
+        }
+    }
+
+    .valor-transacao {
+        font-weight: bold;
+    }
+
+    .valor-transacao.entrada {
+        color: var(--verde);
+    }
+    
+    .valor-transacao.saida {
+        color: var(--vermelho);
+    }
+}
+
+.card-transacao.entrada {
+    border-left: 6px solid var(--verde);
+}
+
+.card-transacao.saida {
+    border-left: 6px solid var(--vermelho);
+}

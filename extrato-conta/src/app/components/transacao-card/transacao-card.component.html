@@ -1,0 +1,15 @@
+<div class="card-transacao" [class]="transacao().tipo.toLowerCase()">
+  <div class="detalhes-transacao">
+    <p class="data-transacao">{{ transacao().data | date : 'dd MMM' : '' : 'pt-BR' }}</p>
+    <p class="descricao-transacao">{{ transacao().descricao }}</p>
+  </div>
+  
+  <p class="valor-transacao" [class]="transacao().tipo.toLowerCase()">
+    @if (transacao().tipo === "ENTRADA") {
+      <span>+</span>
+    } @else {
+      <span>-</span>
+    }
+    {{ transacao().valor | currency : "BRL" : "symbol" : ".2-2" }}
+  </p>
+</div>

@@ -1,0 +1,27 @@
+<header>
+  <h1>CityBank Digital</h1>
+  <p class="texto-saldo">Saldo Atual</p>
+  @if (estaCarregando()) {
+    <div class="carregando-skeleton"></div>
+  } @else {
+    <p class="valor-saldo">{{ saldo | currency : "BRL" : "symbol" : ".2-2" }}</p>
+  }
+</header>
+
+<main>
+  <section class="conteiner-seletores">
+    <p class="seletor" (click)="alterarSelecao('TUDO')" [class.selecionado]="tipoSelecionado === 'TUDO'">Tudo</p>
+    <p class="seletor" (click)="alterarSelecao('ENTRADA')" [class.selecionado]="tipoSelecionado === 'ENTRADA'">Entradas</p>
+    <p class="seletor" (click)="alterarSelecao('SAIDA')" [class.selecionado]="tipoSelecionado === 'SAIDA'">Saídas</p>
+  </section>
+
+  <section class="conteiner-cards">
+    @if (estaCarregando()) {
+      <div class="carregando-skeleton"></div>
+    } @else {
+      @for (transacao of transacoes; track $index) {
+        <app-transacao-card [transacao]="transacao"></app-transacao-card>
+      }
+    }
+  </section>
+</main>
