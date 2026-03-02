@@ -1,0 +1,48 @@
+<div class="login-container">
+  <!-- @if (authService.isUserLoggedIn()) {
+    <h1>Você já está logado!</h1>
+    <p class="logout-message">Deseja sair do sistema?</p>
+    <button mat-fab extended (click)="logout()">
+      <mat-icon fontSet="material-icons-outlined">logout</mat-icon>
+      Sair
+    </button>
+  } @else { -->
+    <h2>Login</h2>
+    <div class="login-card">
+      <form [formGroup]="loginForm" >
+        <mat-form-field appearance="outline">
+          <mat-label>Nome</mat-label>
+
+          <input matInput type="text" formControlName="username">
+
+          @if (loginForm.get('username')?.hasError('required')) {
+            <mat-error>
+              Nome de usuário obrigatório.
+            </mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Senha</mat-label>
+
+          <input matInput [type]="isPasswordVisible ? 'text' : 'password'" formControlName="password">
+
+          <button class="botao-senha" matSuffix mat-icon-button (click)="isPasswordVisible = !isPasswordVisible">
+            <mat-icon>{{ isPasswordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+
+          @if (loginForm.get('password')?.hasError('required')) {
+            <mat-error>
+              Senha obrigatória.
+            </mat-error>
+          }
+        </mat-form-field>
+      </form>
+
+      <button class="botao-login" mat-fab extended (click)="login()">
+        <mat-icon fontSet="material-icons-outlined">login</mat-icon>
+        Entrar
+      </button>
+    </div>
+  <!-- } -->
+</div>

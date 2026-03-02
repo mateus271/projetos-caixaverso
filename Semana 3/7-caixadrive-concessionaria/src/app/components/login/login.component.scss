@@ -1,0 +1,46 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    margin: 3% 35%;
+    border-radius: 8px;
+    padding: 30px 40px;
+    text-align: center;
+    gap: 20px;
+
+    .logout-message {
+      margin-bottom: 25px;
+    }
+
+    .login-card {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        gap: 15px;
+
+        .botao-senha {
+          border: none;
+          background-color: transparent;
+        }
+      }
+
+      .botao-login {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        align-items: center;
+        gap: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        background-color: var(--background-botao);
+        color: var(--branco);
+      }
+    }
+}

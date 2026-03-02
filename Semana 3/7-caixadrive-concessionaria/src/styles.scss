@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+
+@use "@angular/material" as mat;
+@use "material-icons/iconfont/material-icons.css";
+
+:root {
+  --background-header: #454545;
+  --background-conteudo: #C7C7C7;
+  --background-botao: #363636;
+  --branco: #FFFFFF;
+  --preto: #0A0A0A;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: var(--background-conteudo);
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: red !important; /* Desired color */
+}

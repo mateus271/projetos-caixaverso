@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "modelo": "Porsche 911 Carrera",
+    "preco": 795000.00,
+    "imagem": "https://images-porsche.imgix.net/-/media/179AB4F844014CDB9312AC9E26BC266F_D52AF14A47274BF8A4002DC87B50DFB2_CZ26W04IX0011-911-carrera-s-cabrio-front?w=750&q=85&auto=format"
+  },
+  {
+    "id": 2,
+    "modelo": "Porsche Taycan Turbo S",
+    "preco": 1150000.00,
+    "imagem": "https://a.storyblok.com/f/322327/1720x1210/bac91cc9a5/ta24q3eix0011-taycan-turbo-s-front.png/m/1720x1210"
+  },
+  {
+    "id": 3,
+    "modelo": "Porsche Cayenne Coupe",
+    "preco": 630000.00,
+    "imagem": "https://images-porsche.imgix.net/-/media/7D337FA31F63402198F00677D0627995_0E57D2B918884F12A4AAF8652C878CDB_cayenne-e-hybrid-coupe-front?w=750&q=85&auto=format"
+  },
+  {
+    "id": 4,
+    "modelo": "Porsche Macan GTS",
+    "preco": 495000.00,
+    "imagem": "https://a.storyblok.com/f/322327/1720x1210/93666f7159/ma22t3eix0005-mcan-gts-front.png/m/1720x1210"
+  },
+  {
+    "id": 5,
+    "modelo": "Porsche 718 Boxster",
+    "preco": 720000.00,
+    "imagem": "https://a.storyblok.com/f/322327/1720x1210/8bd2eabe4c/bx19i3bix0003-02-718-boxster-front.jpg/m/1720x1210"
+  },
+  {
+    "id": 6,
+    "modelo": "Porsche Panamera Turbo",
+    "preco": 980000.00,
+    "imagem": "https://a.storyblok.com/f/322327/1720x1210/3e96890452/045-model-technical-highlights-1600x1125_dark.png/m/1720x1210"
+  },
+  {
+    "id": 7,
+    "modelo": "Porsche 911 GT3 RS",
+    "preco": 1850000.00,
+    "imagem": "https://a.storyblok.com/f/322327/1497x1053/915892625a/911-gt3-rs-front.png/m/1497x1053"
+  },
+  {
+    "id": 8,
+    "modelo": "Porsche 718 Cayman",
+    "preco": 580000.00,
+    "imagem": "https://a.storyblok.com/f/322327/1720x1210/16d9663f9a/cm21n3bix0004-02-718-cayman-front.jpg/m/1720x1210"
+  }
+]

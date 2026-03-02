@@ -1,0 +1,33 @@
+.conteiner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--background-header);
+  color: var(--branco);
+  font-style: italic;
+
+  .titulo-header {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .botoes-header {
+    display: flex;
+    gap: 20px;
+
+    button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      background: var(--background-botao);
+      border: none;
+      color: var(--branco);
+      cursor: pointer;
+    }
+
+    button.active {
+      border-bottom: 2px solid var(--branco);
+      pointer-events: none;
+    }
+  }
+}
