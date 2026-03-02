@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Carro } from '../interfaces/carro.interface';
 
@@ -7,6 +7,8 @@ import { Carro } from '../interfaces/carro.interface';
   providedIn: 'root'
 })
 export class CatalogoService {
+  public listaCarros = signal<Carro[]>([]);
+
   private http = inject(HttpClient);
 
   private jsonUrl = "estoque.json";

@@ -1,1 +1,22 @@
-<p>perfil works!</p>
+<div class="conteiner-perfil">
+  <div class="conteiner-dados-usuario">
+    <mat-icon class="icone-usuario" fontSet="material-icons-outlined">account_circle</mat-icon>
+    <p class="nome-usuario">{{ usuario?.username }}</p>
+    <p class="tipo-usuario">
+      Você é um usuário do tipo:
+      <span>{{ usuario?.role }}</span></p>
+  </div>
+
+  <div class="conteiner-favoritos">
+    <h2>Favoritos</h2>
+    <div class="conteiner-carros">
+      @for (carro of carrosFavoritos; track carro.id) {
+        <app-card-carro
+          [carro]="carro"
+        ></app-card-carro>
+      } @empty {
+        <p>Você ainda não reservou nenhum carro!</p>
+      }
+    </div>
+  </div>
+</div>

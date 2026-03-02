@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "username": "admin",
+    "username": "Josué",
     "email": "admin@teste.com",
     "password": "123",
     "role": "ADMIN"
   },
   {
     "id": 2,
-    "username": "carlos_vip",
+    "username": "Carlos",
     "email": "carlos@teste.com",
     "password": "123",
     "role": "VIP"
   },
   {
     "id": 3,
-    "username": "ana_std",
+    "username": "Ana Clara",
     "email": "ana@teste.com",
     "password": "123",
     "role": "STANDARD"

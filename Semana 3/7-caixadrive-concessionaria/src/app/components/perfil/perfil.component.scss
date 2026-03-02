@@ -1,0 +1,57 @@
+.conteiner-perfil {
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .conteiner-dados-usuario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+    .icone-usuario {
+      font-size: 100px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .nome-usuario {
+      text-transform: capitalize;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .tipo-usuario {
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+      gap: 8px;
+
+      span {
+        padding: 10px;
+        background: var(--background-header);
+        color: white;
+        border-radius: 6px;
+        font-size: 18px;
+        width: min-content;
+        align-self: center;
+      }
+    }
+  }
+
+  .conteiner-favoritos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .conteiner-carros {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 100vw;
+      overflow-y: hidden;
+      gap: 20px;
+    }
+  }
+}
+

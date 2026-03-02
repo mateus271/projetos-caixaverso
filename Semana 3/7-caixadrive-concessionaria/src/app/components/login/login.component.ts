@@ -55,14 +55,23 @@ export class LoginComponent implements OnInit {
     const usuarioNoArray = this.listaUsuarios().find(usuario => usuario.email === inputEmail);
 
     if (usuarioNoArray && usuarioNoArray.password === password) {
-      this.openSnackBar("Login bem-sucedido! Redirecionando à página inicial");
-      localStorage.setItem("logado", "true");
-      localStorage.setItem("role", usuarioNoArray.role);
-      this.router.navigate(["catalogo"]);
+      this.tratarLoginBemSucedido(usuarioNoArray);
     } else {
-      this.openSnackBar("Usuário ou senha incorreto! Por favor tente novamente");
-      this.loginForm.reset();
+      this.tratarFalhaNoLogin();
     }
+  }
+
+  private tratarFalhaNoLogin() {
+    this.openSnackBar("Usuário ou senha incorreto! Por favor tente novamente");
+    this.loginForm.reset();
+  }
+
+  private tratarLoginBemSucedido(usuarioNoArray: Usuario) {
+    this.openSnackBar("Login bem-sucedido! Redirecionando à página inicial");
+    localStorage.setItem("logado", "true");
+    localStorage.setItem("role", usuarioNoArray.role);
+    this.usuarioService.usuarioLogado.set(usuarioNoArray);
+    this.router.navigate(["catalogo"]);
   }
 
   public logout(): void {
