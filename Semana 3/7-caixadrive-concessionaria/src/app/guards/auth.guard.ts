@@ -12,12 +12,5 @@ export const authGuard: CanActivateFn = (route) => {
     return router.parseUrl("/login");
   }
 
-  const roleExibido = route.data["role"];
-
-  if (roleExibido && roleExibido !== role) {
-    alert("Acesso negado, precisa ser um administrador");
-    return router.parseUrl("/dashboard/perfil");
-  }
-
   return true;
 }

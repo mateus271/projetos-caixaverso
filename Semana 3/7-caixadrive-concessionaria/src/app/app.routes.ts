@@ -5,32 +5,32 @@ import { consorcioResolver } from './resolver/consorcio.resolver';
 import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CatalogoComponent } from './components/catalogo/catalogo.component';
+import { usuariosResolver } from './resolver/usuarios.resolver';
 
 export const routes: Routes = [
   {
     path: "login",
-    component: LoginComponent
+    component: LoginComponent,
+    resolve: {
+      listaUsuarios: usuariosResolver
+    }
   },
   {
     path: "perfil",
-    component: PerfilComponent
+    component: PerfilComponent,
+    canActivate: [authGuard]
   },
   {
     path: "catalogo",
-    component: CatalogoComponent
+    component: CatalogoComponent,
+    canActivate: [authGuard],
+    resolve: {
+      listaCarros: consorcioResolver
+    }
   },
   {
     path: "",
     redirectTo: "login",
     pathMatch: "full"
   }
-
-  // {
-  //   path: "",
-  //   component: "",
-  //   canActivate: [authGuard],
-  //   canActivateChild: [authGuard],
-  //   // lista é o array de objetos necessários na página
-  //   resolve: { lista: consorcioResolver }
-  // }
 ];

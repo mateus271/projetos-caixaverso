@@ -1,23 +1,23 @@
 <div class="login-container">
-  <!-- @if (authService.isUserLoggedIn()) {
+  @if (estaLogado) {
     <h1>Você já está logado!</h1>
     <p class="logout-message">Deseja sair do sistema?</p>
-    <button mat-fab extended (click)="logout()">
+    <button class="botao-login" mat-fab extended (click)="logout()">
       <mat-icon fontSet="material-icons-outlined">logout</mat-icon>
       Sair
     </button>
-  } @else { -->
+  } @else {
     <h2>Login</h2>
     <div class="login-card">
       <form [formGroup]="loginForm" >
         <mat-form-field appearance="outline">
-          <mat-label>Nome</mat-label>
+          <mat-label>Email</mat-label>
 
-          <input matInput type="text" formControlName="username">
+          <input matInput type="email" formControlName="email">
 
-          @if (loginForm.get('username')?.hasError('required')) {
+          @if (loginForm.get('email')?.hasError('required')) {
             <mat-error>
-              Nome de usuário obrigatório.
+              Email obrigatório.
             </mat-error>
           }
         </mat-form-field>
@@ -44,5 +44,5 @@
         Entrar
       </button>
     </div>
-  <!-- } -->
+  }
 </div>
