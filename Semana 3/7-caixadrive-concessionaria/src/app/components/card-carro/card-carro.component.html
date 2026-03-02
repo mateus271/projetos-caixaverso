@@ -2,8 +2,10 @@
   <img [src]="carro().imagem" [alt]="'Foto do carro ' + carro().modelo">
   <p class="modelo-carro">{{ carro().modelo }}</p>
   <p class="preco-carro">{{ carro().preco | currency : "BRL" : "symbol" : ".2-2" }}</p>
-  <button class="botao-reservar" mat-fab extended (click)="reservarCarro(carro().id)">
-    <mat-icon fontSet="material-icons-outlined">favorite</mat-icon>
-    Reservar
-  </button>
+  @if (rotaAtual() !== "/perfil") {
+    <button class="botao-reservar" mat-fab extended (click)="reservarCarro(carro().id)">
+      <mat-icon fontSet="material-icons-outlined">{{ isFavorito() ? 'heart_broken' : 'favorite' }}</mat-icon>
+      {{ isFavorito() ? 'Excluir reserva' : 'Reservar' }}
+    </button>
+  }
 </div>

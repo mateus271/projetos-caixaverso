@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Favoritos } from '../../interfaces/favoritos.interface';
 import { Usuario } from '../../interfaces/usuario.interface';
 import { UsuariosService } from '../../services/usuarios.service';
+import { CatalogoService } from '../../services/catalogo.service';
 import { MatIconModule } from '@angular/material/icon';
 import { CardCarroComponent } from '../card-carro/card-carro.component';
 import { Carro } from '../../interfaces/carro.interface';
@@ -20,21 +21,29 @@ export class PerfilComponent implements OnInit {
   public carrosFavoritos: Carro[] = [];
 
   private usuariosService = inject(UsuariosService);
+  private catalogoService = inject(CatalogoService);
 
   ngOnInit(): void {
     this.usuario = this.usuariosService.usuarioLogado();
-    const favoritos = this.obterFavoritos();
+    this.carregarFavoritos();
   }
 
-  obterFavoritos(): Favoritos | null {
+  private carregarFavoritos(): void {
+    if (!this.usuario) return;
+
+    const favoritos = this.obterFavoritos();
+    const idsFavoritos = new Set(
+      favoritos
+        .filter(f => f.idCliente === this.usuario!.id)
+        .map(f => f.idCarro)
+    );
+
+    const todosCarros = this.catalogoService.listaCarros();
+    this.carrosFavoritos = todosCarros.filter(c => idsFavoritos.has(c.id));
+  }
+
+  private obterFavoritos(): Favoritos[] {
     const data = localStorage.getItem('favoritos');
-
-    if (!data) {
-      return null;
-    }
-
-    console.log("Favoritos", JSON.parse(data) as Favoritos);
-
-    return JSON.parse(data) as Favoritos;
+    return data ? JSON.parse(data) as Favoritos[] : [];
   }
 }

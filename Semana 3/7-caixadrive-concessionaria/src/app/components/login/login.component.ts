@@ -1,5 +1,4 @@
-import { inject, OnInit, signal } from '@angular/core';
-import { Component } from '@angular/core';
+import { inject, OnInit, signal, Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
@@ -67,7 +66,6 @@ export class LoginComponent implements OnInit {
   }
 
   private tratarLoginBemSucedido(usuarioNoArray: Usuario) {
-    this.openSnackBar("Login bem-sucedido! Redirecionando à página inicial");
     localStorage.setItem("logado", "true");
     localStorage.setItem("role", usuarioNoArray.role);
     this.usuarioService.usuarioLogado.set(usuarioNoArray);

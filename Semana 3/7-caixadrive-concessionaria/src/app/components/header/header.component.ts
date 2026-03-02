@@ -1,7 +1,7 @@
 import { inject, OnInit } from '@angular/core';
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs';
+import { Router } from '@angular/router';
+import { DetectarRotaService } from '../../services/detectar-rota.service';
 
 @Component({
   selector: 'app-header',
@@ -11,18 +11,11 @@ import { filter } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   public router = inject(Router);
-  public rotaAtual: string = "";
+  private detectarRotaService = inject(DetectarRotaService);
+  public rotaAtual = this.detectarRotaService.rotaAtual;
 
   ngOnInit() {
-    this.detectarRota();
-  }
-
-  private detectarRota() {
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.rotaAtual = this.router.url;
-      });
+    this.detectarRotaService.detectarRota();
   }
 
   public navigate(route: string): void {
